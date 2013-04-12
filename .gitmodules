@@ -16,3 +16,9 @@
 [submodule "cookbooks/python"]
 	path = cookbooks/python
 	url = git://github.com/opscode-cookbooks/python.git
+[submodule "cookbooks/mysql"]
+	path = cookbooks/mysql
+	url = git://github.com/opscode-cookbooks/mysql.git
+[submodule "cookbooks/sqlite"]
+	path = cookbooks/sqlite
+	url = git://github.com/opscode-cookbooks/sqlite.git
