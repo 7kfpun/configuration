@@ -22,3 +22,6 @@
 [submodule "cookbooks/sqlite"]
 	path = cookbooks/sqlite
 	url = git://github.com/opscode-cookbooks/sqlite.git
+[submodule "cookbooks/nginx"]
+	path = cookbooks/nginx
+	url = https://github.com/opscode-cookbooks/nginx.git
