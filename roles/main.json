@@ -17,6 +17,7 @@
         "recipe[sudo]",
         "recipe[build-essential]",
         "recipe[python]",
-        "recipe[nginx]"
+        "recipe[nginx]",
+        "recipe[git]"
     ]
 }
