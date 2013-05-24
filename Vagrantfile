@@ -1,4 +1,8 @@
 APP_HOSTNAME = 'virtual'
+APP_HOST = '33.33.33.21'
+
+# Config
+NFS = true
 
 # Vagrant 2.0.x
 Vagrant.configure("2") do |config|
@@ -8,10 +12,12 @@ Vagrant.configure("2") do |config|
     # Set hostname
     config.vm.hostname = APP_HOSTNAME
 
+    # Configure network
+    config.vm.network :private_network, ip: APP_HOST
     config.vm.network :forwarded_port, host: 8000, guest: 80
 
     # Share folders
-    config.vm.synced_folder "..", "/vagrant", :nfs => true
+    config.vm.synced_folder "..", "/workspace", :nfs => NFS
 
     # Configure provider
     config.vm.provider :virtualbox do |vb|
@@ -31,4 +37,8 @@ Vagrant.configure("2") do |config|
     #   # You may also specify custom JSON attributes:
     #   chef.json = { :mysql_password => "foo" }
     end
+
+    # enable X11 forwarding over SSH connections
+    config.ssh.forward_x11 = true
+    config.ssh.forward_agent = true
 end
