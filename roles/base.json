@@ -1,5 +1,5 @@
 {
-    "name": "home",
+    "name": "base",
     "description": "Base Server Setup",
     "chef_type": "role",
     "json_class": "Chef::Role",

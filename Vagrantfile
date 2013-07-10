@@ -1,5 +1,5 @@
 APP_HOSTNAME = 'virtual'
-APP_HOST = '33.33.33.21'
+APP_HOST = '33.33.33.10'
 
 # Config
 NFS = true
@@ -14,7 +14,6 @@ Vagrant.configure("2") do |config|
 
     # Configure network
     config.vm.network :private_network, ip: APP_HOST
-    config.vm.network :forwarded_port, host: 8000, guest: 80
 
     # Share folders
     config.vm.synced_folder "..", "/workspace", :nfs => NFS
@@ -32,7 +31,7 @@ Vagrant.configure("2") do |config|
     config.vm.provision :chef_solo do |chef|
       chef.cookbooks_path = "cookbooks"
       chef.roles_path = "roles"
-      chef.add_role('main')
+      chef.add_role('gae')
     #
     #   # You may also specify custom JSON attributes:
     #   chef.json = { :mysql_password => "foo" }

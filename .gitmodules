@@ -25,3 +25,9 @@
 [submodule "cookbooks/sudo"]
 	path = cookbooks/sudo
 	url = https://github.com/opscode-cookbooks/sudo.git
+[submodule "cookbooks/gae-cookbook"]
+	path = cookbooks/gae-cookbook
+	url = https://github.com/Floqq/gae-cookbook
+[submodule "cookbooks/curl"]
+	path = cookbooks/curl
+	url = git@github.com:retr0h/cookbook-curl.git
