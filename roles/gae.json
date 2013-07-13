@@ -10,6 +10,7 @@
     },
     "run_list": [
         "role[base]",
-        "recipe[gae-cookbook]"
+        "recipe[gae-cookbook]",
+        "recipe[memcached]"
     ]
 }

@@ -40,4 +40,7 @@ Vagrant.configure("2") do |config|
     # enable X11 forwarding over SSH connections
     config.ssh.forward_x11 = true
     config.ssh.forward_agent = true
+
+    # sharing a common package cache among similiar VM instances
+    config.cache.auto_detect = true
 end
