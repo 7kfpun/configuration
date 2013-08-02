@@ -18,6 +18,7 @@
         "recipe[build-essential]",
         "recipe[python]",
         "recipe[nginx]",
-        "recipe[git]"
+        "recipe[git]",
+        "recipe[ag]"
     ]
 }
