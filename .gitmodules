@@ -25,9 +25,6 @@
 [submodule "cookbooks/sudo"]
 	path = cookbooks/sudo
 	url = https://github.com/opscode-cookbooks/sudo.git
-[submodule "cookbook/ag"]
-	path = cookbook/ag
-	url = git@github.com:teamsnap/the_silver_searcher-cookbook.git
 [submodule "cookbooks/ag"]
 	path = cookbooks/ag
 	url = git@github.com:teamsnap/the_silver_searcher-cookbook.git
