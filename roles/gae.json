@@ -5,7 +5,7 @@
     "json_class": "Chef::Role",
     "default_attributes": {
         "gae": {
-            "version": "1.8.2"
+            "version": "1.8.6"
         }
     },
     "run_list": [
