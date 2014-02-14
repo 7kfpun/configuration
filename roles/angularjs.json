@@ -1,0 +1,12 @@
+{
+    "name": "angularjs",
+    "description": "AngularJS Setup",
+    "chef_type": "role",
+    "json_class": "Chef::Role",
+    "default_attributes": {
+    },
+    "run_list": [
+        "role[base]",
+        "recipe[nodejs]"
+    ]
+}
