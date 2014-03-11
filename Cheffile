@@ -1,0 +1,39 @@
+#!/usr/bin/env ruby
+#^syntax detection
+
+site 'http://community.opscode.com/api/v1'
+
+cookbook 'apt'
+cookbook 'build-essential'
+cookbook 'gae-cookbook', {:github => 'ikame/gae-cookbook.git'}
+cookbook 'git', {}
+cookbook 'grunt', {:github => 'MattSurabian/grunt_cookbook.git'}
+cookbook 'memcached'
+cookbook 'mongodb', {}
+cookbook 'mysql', {}
+cookbook 'nginx', {}
+cookbook 'nodejs', {:github => 'mdxp/nodejs-cookbook'}
+cookbook 'openssl'
+cookbook 'php', {}
+cookbook 'postgresql', {}
+cookbook 'python'
+cookbook 'python', {}
+cookbook 'redis', {:github => 'ctrabold/chef-redis'}
+cookbook 'runit'
+cookbook 'sqlite'
+cookbook 'sudo'
+cookbook 'vim'
+cookbook 'windows'
+cookbook 'yum'
+cookbook 'yum-epel'
+
+# cookbook 'chef-client'
+
+# cookbook 'apache2', '>= 1.0.0'
+
+# cookbook 'rvm',
+#   :git => 'https://github.com/fnichol/chef-rvm'
+
+# cookbook 'postgresql',
+#   :git => 'https://github.com/findsyou/cookbooks',
+#   :ref => 'postgresql-improvements'
