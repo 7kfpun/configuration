@@ -17,3 +17,13 @@ Virtual machine for development
 
 ### librarian-chef
 - sudo gem install librarian-chef
+
+## Roles
+
+### db.json
+- memcached
+- mongodb
+- postgresql (http://<address>:4000/)
+- rabbitmq (http://<address>:15672/)
+- redis
+- monit (http://<address>:2812/)

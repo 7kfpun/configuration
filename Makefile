@@ -2,7 +2,6 @@ install:
 	#@git submodule init && git submodule update
 	#vagrant plugin install vagrant-cachier
 	librarian-chef install
-	rm -rf cookbooks/git
 	rm -rf cookbooks/homebrew
 
 update:

@@ -9,20 +9,25 @@ cookbook 'curl'
 cookbook 'gae-cookbook', {:github => 'ikame/gae-cookbook.git'}
 cookbook 'git'
 cookbook 'grunt_cookbook', {:github => 'MattSurabian/grunt_cookbook.git'}
-cookbook 'phppgadmin', {:github => 'plexus/chef-phppgadmin'}
-cookbook 'memcached'
-cookbook 'mongodb'
+cookbook 'locale'
+cookbook 'monit'
+cookbook 'memcached' 
+cookbook 'mongodb', {:github => 'edelight/chef-mongodb'}
 cookbook 'mysql' 
 cookbook 'nginx'
 cookbook 'nodejs', {:github => 'mdxp/nodejs-cookbook'}
 cookbook 'openssl'
 cookbook 'php'
+cookbook 'phppgadmin', {:github => 'plexus/chef-phppgadmin'}
 cookbook 'postgresql', {:github => 'phlipper/chef-postgresql'}
 cookbook 'python'
+cookbook 'rabbitmq'
+cookbook 'rabbitmq-management', {:github => 'jdhollis/rabbitmq-management-cookbook'}
 cookbook 'redis', {:github => 'ctrabold/chef-redis'}
 cookbook 'runit'
 cookbook 'sqlite'
 cookbook 'sudo'
+cookbook 'supervisor'
 cookbook 'timezone'
 cookbook 'vim'
 cookbook 'windows'
