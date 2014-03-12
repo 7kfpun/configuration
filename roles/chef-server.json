@@ -1,0 +1,20 @@
+{
+    "name": "chef-server",
+    "description": "Setup chef-server",
+    "chef_type": "role",
+    "json_class": "Chef::Role",
+    "default_attributes": {
+        "chef-server": {
+            "api_fdqn": "chef.kfpun.com",
+            "configuration": {
+                "chef_server_webui": {
+                    "enable": true
+                }
+            }
+        }
+    },
+    "run_list": [
+        "role[base]",
+        "recipe[chef-server::default]"
+    ]
+}
