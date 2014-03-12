@@ -1,12 +1,29 @@
 APP_HOSTNAME = 'virtual1'
 APP_HOST = '33.33.33.10'
-APP_ROLES = ['db']
+APP_ROLES = ['chef-server']
 
 # Config
 NFS = true
 
 # Vagrant 2.0.x
 Vagrant.configure("2") do |config|
+
+  if Vagrant.has_plugin?('vagrant-cachier')
+    puts 'INFO:  Vagrant-cachier plugin detected. Optimizing caches.'
+    config.cache.auto_detect = true
+  else
+    puts 'WARN:  Vagrant-cachier plugin not detected. Continuing unoptimized.'
+  end
+
+  # Detects vagrant-omnibus plugin
+  if Vagrant.has_plugin?('vagrant-omnibus')
+    puts 'INFO:  Vagrant-omnibus plugin detected.'
+    config.omnibus.chef_version = :latest
+  else
+    puts "FATAL: Vagrant-omnibus plugin not detected. Please install the plugin with\n       'vagrant plugin install vagrant-omnibus' from any other directory\n       before continuing."
+    exit
+  end
+
   config.vm.box = "precise64"
   config.vm.box_url = "http://files.vagrantup.com/precise64.box"
 
