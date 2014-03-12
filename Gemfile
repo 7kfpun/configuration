@@ -5,5 +5,9 @@ group :development do
   gem 'vagrant-cachier',        github: 'fgrehm/vagrant-cachier'
   gem 'vagrant-librarian-chef'
   gem 'vagrant-omnibus'
+
+  gem 'chef', '>=11.4.0'
+  gem 'knife-solo'
+
   gem 'rake'
 end
