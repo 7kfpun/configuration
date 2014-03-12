@@ -18,6 +18,12 @@ Virtual machine for development
 ### librarian-chef
 - sudo gem install librarian-chef
 
+### Download cookbooks
+- librarian-chef install
+
+### Start vagrant
+- vagrant up
+
 ## Roles
 
 ### base.json
