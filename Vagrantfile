@@ -1,5 +1,6 @@
 APP_HOSTNAME = 'virtual1'
 APP_HOST = '33.33.33.10'
+APP_ROLES = ['db']
 
 # Config
 NFS = true
@@ -25,14 +26,18 @@ Vagrant.configure("2") do |config|
     vb.customize ["modifyvm", :id, "--name", APP_HOSTNAME]
   end
 
+  config.omnibus.chef_version = :latest
+
   # Enable provisioning with chef solo, specifying a cookbooks path (relative
   # to this Vagrantfile), and adding some recipes and/or roles.
   #
   config.vm.provision :chef_solo do |chef|
     chef.cookbooks_path = "cookbooks"
     chef.roles_path = "roles"
-    chef.add_role('gae')
-    chef.add_role('angularjs')
+
+    APP_ROLES.each do |role|
+      chef.add_role role
+    end
   #
   #   # You may also specify custom JSON attributes:
   #   chef.json = { :mysql_password => "foo" }
@@ -42,6 +47,4 @@ Vagrant.configure("2") do |config|
   config.ssh.forward_x11 = true
   config.ssh.forward_agent = true
 
-  # sharing a common package cache among similiar VM instances
-  config.cache.auto_detect = true
 end

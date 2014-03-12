@@ -10,7 +10,8 @@
                 "users": ["vagrant", "kf"],
                 "passwordless": true
             }
-        }
+        },
+        "tz": "Asia/Hong_Kong"
     },
     "run_list": [
         "recipe[apt]",
@@ -18,7 +19,6 @@
         "recipe[build-essential]",
         "recipe[python]",
         "recipe[nginx]",
-        "recipe[git]",
-        "recipe[ag]"
+        "recipe[timezone]"
     ]
 }
