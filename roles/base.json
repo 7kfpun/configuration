@@ -16,6 +16,11 @@
             "lang": "en_US.UTF-8",
             "lc_all": "en_US.UTF-8"
         },
+        "supervisor": {
+            "inet_port": "9001",
+            "inet_username": "supervisor",
+            "inet_password": "supervisor"
+        },
         "tz": "Asia/Hong_Kong"
     },
     "run_list": [

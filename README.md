@@ -20,6 +20,9 @@ Virtual machine for development
 
 ## Roles
 
+### base.json
+- supervisor (http://<address>:9001/)
+
 ### db.json
 - memcached
 - mongodb
