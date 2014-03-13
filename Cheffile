@@ -10,10 +10,11 @@ cookbook 'curl'
 cookbook 'gae-cookbook', {:github => 'ikame/gae-cookbook.git'}
 cookbook 'git'
 cookbook 'grunt_cookbook', {:github => 'MattSurabian/grunt_cookbook.git'}
+cookbook 'jenkins'
 cookbook 'locale'
-cookbook 'monit'
 cookbook 'memcached' 
 cookbook 'mongodb', {:github => 'edelight/chef-mongodb'}
+cookbook 'monit'
 cookbook 'mysql' 
 cookbook 'nginx'
 cookbook 'nodejs', {:github => 'mdxp/nodejs-cookbook'}
