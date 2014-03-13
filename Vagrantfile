@@ -1,6 +1,6 @@
 APP_HOSTNAME = 'virtual1'
 APP_HOST = '33.33.33.10'
-APP_ROLES = ['gae']
+APP_ROLES = ['db', 'db-monitoring']
 
 # Config
 NFS = true

@@ -14,7 +14,7 @@ cookbook 'jenkins'
 cookbook 'locale'
 cookbook 'memcached' 
 cookbook 'mongodb', {:github => 'edelight/chef-mongodb'}
-cookbook 'monit'
+cookbook 'monit', {:github => 'apsoto/monit'}
 cookbook 'mysql' 
 cookbook 'nginx'
 cookbook 'nodejs', {:github => 'mdxp/nodejs-cookbook'}

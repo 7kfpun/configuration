@@ -32,7 +32,11 @@ Virtual machine for development
 ### db.json
 - memcached
 - mongodb
-- postgresql (http://<address>:4000/)
-- rabbitmq (http://<address>:15672/)
+- postgresql
+- rabbitmq
 - redis
+
+### db-monitoring
+- postgresql admin (http://<address>:4000/)
+- rabbitmq management (http://<address>:15672/)
 - monit (http://<address>:2812/)
