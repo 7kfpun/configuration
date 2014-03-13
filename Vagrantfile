@@ -1,6 +1,6 @@
 APP_HOSTNAME = 'virtual1'
 APP_HOST = '33.33.33.10'
-APP_ROLES = ['chef-server']
+APP_ROLES = ['gae']
 
 # Config
 NFS = true
@@ -17,7 +17,7 @@ Vagrant.configure("2") do |config|
 
   # Detects vagrant-omnibus plugin
   if Vagrant.has_plugin?('vagrant-omnibus')
-    puts 'INFO:  Vagrant-omnibus plugin detected.'
+    puts 'INFO:  Vagrant-omnibus plugin detected. Chef is the latest version.'
     config.omnibus.chef_version = :latest
   else
     puts "FATAL: Vagrant-omnibus plugin not detected. Please install the plugin with\n       'vagrant plugin install vagrant-omnibus' from any other directory\n       before continuing."
@@ -49,7 +49,7 @@ Vagrant.configure("2") do |config|
   # to this Vagrantfile), and adding some recipes and/or roles.
   #
   config.vm.provision :chef_solo do |chef|
-    chef.cookbooks_path = "cookbooks"
+    chef.cookbooks_path = ["cookbooks", "site-cookbooks"]
     chef.roles_path = "roles"
 
     APP_ROLES.each do |role|
