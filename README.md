@@ -15,11 +15,8 @@ Virtual machine for development
 ### NFS
 - sudo apt-get install nfs-kernel-server
 
-### librarian-chef
-- sudo gem install librarian-chef
-
-### Download cookbooks
-- librarian-chef install
+### install plugin
+- vagrant plugin install vagrant-omnibus
 
 ### Start vagrant
 - vagrant up
@@ -40,3 +37,6 @@ Virtual machine for development
 - postgresql admin (http://<address>:4000/)
 - rabbitmq management (http://<address>:15672/)
 - monit (http://<address>:2812/)
+
+## Remarks
+- which vagrant should be /usr/bin/vagrant
