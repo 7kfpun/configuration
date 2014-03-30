@@ -5,7 +5,7 @@
     "json_class": "Chef::Role",
     "default_attributes": {
         "gae": {
-            "version": "1.9.0",
+            "version": "1.9.1",
             "url": "https://commondatastorage.googleapis.com/appengine-sdks/featured/google_appengine_%s.zip"
         } 
     },
