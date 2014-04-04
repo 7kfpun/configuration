@@ -36,5 +36,5 @@ nosetests.xml
 .project
 .pydevproject
 
-cookbooks
-tmp
+cookbooks/
+tmp/

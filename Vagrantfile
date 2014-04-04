@@ -4,6 +4,8 @@ APP_ROLES = ['center']
 
 # Config
 NFS = true
+VM_MEMORY = "3072"
+VM_CPUS = "2"
 
 # Vagrant 2.0.x
 Vagrant.configure("2") do |config|
@@ -39,7 +41,8 @@ Vagrant.configure("2") do |config|
   # Configure provider
   config.vm.provider :virtualbox do |vb|
     vb.gui = false
-    vb.customize ["modifyvm", :id, "--memory", "1024"]
+    vb.customize ["modifyvm", :id, "--memory", VM_MEMORY]
+    vb.customize ["modifyvm", :id, "--cpus", VM_CPUS]
     vb.customize ["modifyvm", :id, "--name", APP_HOSTNAME]
   end
 
