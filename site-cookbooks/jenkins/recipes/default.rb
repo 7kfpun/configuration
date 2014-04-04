@@ -1,3 +1,4 @@
+include_recipe "nginx"
 include_recipe "jenkins::master"
 
 # Jenkins plugins

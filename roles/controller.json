@@ -5,6 +5,7 @@
     "json_class": "Chef::Role",
     "default_attributes": {
         "jenkins": {
+            "pypi": "http://pypi.python.org/simple",
             "master": {
                 "host": "0.0.0.0"
             },

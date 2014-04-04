@@ -52,7 +52,7 @@ OLD_REQ_SUM=$(cat ./.env/.reqsum)
     else
         rm -rf .env
         virtualenv -q .env -p <%= @python %>
-    ./.env/bin/pip install -r requirements.txt -i <%= node[:multichannel][:pypi] %> &amp;&amp; sh -c "md5sum requirements.txt > .env/.reqsum"
+    ./.env/bin/pip install -r requirements.txt -i <%= node[:jenkins][:pypi] %> &amp;&amp; sh -c "md5sum requirements.txt > .env/.reqsum"
     fi
 <% end -%>
 
