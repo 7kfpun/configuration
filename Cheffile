@@ -7,10 +7,12 @@ cookbook 'apt'
 cookbook 'build-essential'
 cookbook 'chef-server'
 cookbook 'curl'
-cookbook 'gae-cookbook', {:github => 'ikame/gae-cookbook.git'}
+cookbook 'gae-cookbook', {:github => 'ikame/gae-cookbook'}
 cookbook 'git'
-cookbook 'grunt_cookbook', {:github => 'MattSurabian/grunt_cookbook.git'}
+cookbook 'grunt_cookbook', {:github => 'MattSurabian/grunt_cookbook'}
+#cookbook 'jenkins', {:github => 'fnichol/chef-jenkins'}
 cookbook 'jenkins'
+cookbook 'java', {:github => 'socrata-cookbooks/java'}
 cookbook 'locale'
 cookbook 'memcached' 
 cookbook 'mongodb', {:github => 'edelight/chef-mongodb'}
@@ -35,3 +37,6 @@ cookbook 'vim'
 cookbook 'windows'
 cookbook 'yum'
 cookbook 'yum-epel'
+
+#future
+cookbook 'munin'

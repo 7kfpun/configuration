@@ -1,0 +1,55 @@
+{
+    "name": "center",
+    "description": "Center Server Setup",
+    "chef_type": "role",
+    "json_class": "Chef::Role",
+    "default_attributes": {
+        "jenkins": {
+            "pypi": "http://pypi.python.org/simple",
+            "master": {
+                "host": "0.0.0.0"
+            },
+            "server": {
+                "plugins": [
+                    "chucknorris",
+                    "cobertura",
+                    "dashboard-view",
+                    "git",
+                    "greenballs",
+                    "maven-plugin",
+                    "violations",
+                    "ghprb"
+                ]
+            },
+            "jobs": [
+                {
+                    "name": "thaiinhk",
+                    "source": "https://github.com/7kfpun/com.thaiinhk",
+                    "branch": "develop",
+                    "cmd": "make t",
+                    "python": "python",
+                    "junit_disable": true,
+                    "cobertura_disable": true
+                }, {
+                    "name": "getmewrite",
+                    "source": "https://github.com/7kfpun/com.getmewrite",
+                    "branch": "develop",
+                    "cmd": "make t",
+                    "python": "python",
+                    "junit_disable": true,
+                    "cobertura_disable": true
+                }
+            ]
+        },
+        "java": {
+            "install_flavor": "openjdk",
+            "jdk_version": "7",
+            "accept_license_agreement": true
+        }
+    },
+    "run_list": [
+        "role[base]",
+        "recipe[java]",
+        "recipe[jenkins]"
+    ]
+}
