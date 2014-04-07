@@ -1,13 +1,16 @@
 {
-    "name": "angularjs",
-    "description": "AngularJS Setup",
+    "name": "webapp",
+    "description": "Web app Setup",
     "chef_type": "role",
     "json_class": "Chef::Role",
     "default_attributes": {
+        "npm": {
+            "global_packages": ["grunt-cli", "bower"]
+        }
     },
     "run_list": [
         "role[base]",
         "recipe[nodejs]",
-        "recipe[grunt_cookbook]"
+        "recipe[npm]"
     ]
 }

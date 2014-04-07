@@ -6,6 +6,7 @@ site 'http://community.opscode.com/api/v1'
 cookbook 'apt'
 cookbook 'build-essential'
 cookbook 'chef-server'
+cookbook 'npm', {:github => 'balbeko/chef-npm'}
 cookbook 'curl'
 cookbook 'gae-cookbook', {:github => 'ikame/gae-cookbook'}
 cookbook 'git'
