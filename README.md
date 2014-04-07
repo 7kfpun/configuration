@@ -26,6 +26,10 @@ Virtual machine for development
 ### base.json
 - supervisor (http://<address>:9001/)
 
+### controller.json
+- jenkins (http://<address>:8180/)
+- chef-server (https://<address>/)
+
 ### db.json
 - memcached
 - mongodb

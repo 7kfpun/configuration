@@ -1,6 +1,6 @@
 APP_HOSTNAME = 'virtual1'
 APP_HOST = '33.33.33.10'
-APP_ROLES = ['controller']
+APP_ROLES = ['controller', 'chef-server', 'gae']
 
 # Config
 NFS = true
