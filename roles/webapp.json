@@ -11,6 +11,7 @@
     "run_list": [
         "role[base]",
         "recipe[nodejs]",
-        "recipe[npm]"
+        "recipe[npm]",
+        "recipe[firefox]"
     ]
 }

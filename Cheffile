@@ -6,12 +6,10 @@ site 'http://community.opscode.com/api/v1'
 cookbook 'apt'
 cookbook 'build-essential'
 cookbook 'chef-server'
-cookbook 'npm', {:github => 'balbeko/chef-npm'}
 cookbook 'curl'
+cookbook 'firefox', {:github => 'lakim/chef-firefox'}
 cookbook 'gae-cookbook', {:github => 'ikame/gae-cookbook'}
 cookbook 'git'
-cookbook 'grunt_cookbook', {:github => 'MattSurabian/grunt_cookbook'}
-#cookbook 'jenkins', {:github => 'fnichol/chef-jenkins'}
 cookbook 'jenkins'
 cookbook 'java', {:github => 'socrata-cookbooks/java'}
 cookbook 'locale'
@@ -21,6 +19,7 @@ cookbook 'monit', {:github => 'apsoto/monit'}
 cookbook 'mysql' 
 cookbook 'nginx'
 cookbook 'nodejs', {:github => 'mdxp/nodejs-cookbook'}
+cookbook 'npm', {:github => 'balbeko/chef-npm'}
 cookbook 'openssl'
 cookbook 'php'
 cookbook 'phppgadmin', {:github => 'plexus/chef-phppgadmin'}
