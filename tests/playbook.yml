@@ -1,0 +1,10 @@
+---
+- hosts: all
+
+  roles:
+    - mysql
+
+  tasks:
+    - name: Install MySQL module
+      apt: pkg=mysql
+      sudo: yes

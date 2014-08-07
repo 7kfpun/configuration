@@ -16,7 +16,7 @@ cookbook 'locale'
 cookbook 'memcached' 
 cookbook 'mongodb', {:github => 'edelight/chef-mongodb'}
 cookbook 'monit', {:github => 'apsoto/monit'}
-cookbook 'mysql' 
+cookbook 'mysql', {:github => 'opscode-cookbooks/mysql'} 
 cookbook 'nginx'
 cookbook 'nodejs', {:github => 'mdxp/nodejs-cookbook'}
 cookbook 'npm', {:github => 'balbeko/chef-npm'}

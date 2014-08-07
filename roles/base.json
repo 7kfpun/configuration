@@ -21,7 +21,10 @@
             "inet_username": "supervisor",
             "inet_password": "supervisor"
         },
-        "tz": "Asia/Hong_Kong"
+        "tz": "Asia/Hong_Kong",
+        "ohai" :{
+            "version" : "7"   
+        }
     },
     "run_list": [
         "recipe[apt]",
