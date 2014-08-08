@@ -1,8 +1,11 @@
 ---
 - hosts: all
+  vars_files:
+    - vars.yml
   sudo: yes
 
   roles:
+    - Stouts.users
     - bennojoy.nginx
     - DavidWittman.ansible-redis
     - Ansibles.mysql
@@ -24,18 +27,20 @@
         priv: "*.*:ALL"                     # optional, defaults to "*.*:ALL"
         host: "%"
 
+    - users_groups: [admin]
+    - users_users:
+      - name: kf
+        ssh_keys:
+          - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDgCsc6t4IWelotdrrFfxGO/8n7Dqgnsbb4WfXapTFA7Gm0vPKLKT9kHxhVj60E8o4Voqm/RIR9ErxdirtsCh9OZRWS9RKFeMSapwW3w4cvVir4wR5Qy89b1CypshZziInD9Jl3OeJe/jBLYTBHGjJAtKbYNn2TETL+URfjEN0hLQAjTDYf4tju3S9UeIHHRnVLw/42eEW7kXyVT2Wn5Ie20+2kiIR0+L0k/7a0ZH4M1+0UBRGGJEefY7Ab1gniq+bQ9EJUyzMkgOO/lVee7tuvU9NcHaBxH++EHzVkJfZFsoQ0CseC/zE5KJqZ9lTHFbcBVQzOClugA6KWZMv/VQIj 7kfpun@gmail.com 
+
   tasks:
     - name: apt-get update
       apt: update_cache=yes cache_valid_time=2678400
-      sudo: yes
 
-    - name: Install python packages
-      apt: pkg={{item}}
-      with_items:
-        - build-essential
-        - git
-        - python3
-        - python-pip
-        - python3-dev
-        - wget
-      sudo: yes
+    - name: Install required system packages.
+      apt: pkg={{ item }} state=installed
+      with_items: "{{ system_packages }}"
+
+    - name: Install required Python packages.
+      easy_install: name={{ item }}
+      with_items: "{{ python_packages }}"
