@@ -1,10 +1,41 @@
 ---
 - hosts: all
+  sudo: yes
 
   roles:
-    - mysql
+    - bennojoy.nginx
+    - DavidWittman.ansible-redis
+    - Ansibles.mysql
+    - Stouts.supervisor
+
+  vars:
+    - redis_version: "2.8.13"
+
+    - mysql_root_password: "password"
+
+    - mysql_databases:
+      - name: "valtait"
+        collation: "utf8_general_ci"        # optional, defaults to "utf8_general_ci"
+        encoding: "utf8"                    # optional, defaults to "utf8"
+
+    - mysql_users:
+      - name: "valtait"
+        pass: "password"
+        priv: "*.*:ALL"                     # optional, defaults to "*.*:ALL"
+        host: "%"
 
   tasks:
-    - name: Install MySQL module
-      apt: pkg=mysql
+    - name: apt-get update
+      apt: update_cache=yes cache_valid_time=2678400
+      sudo: yes
+
+    - name: Install python packages
+      apt: pkg={{item}}
+      with_items:
+        - build-essential
+        - git
+        - python3
+        - python-pip
+        - python3-dev
+        - wget
       sudo: yes
