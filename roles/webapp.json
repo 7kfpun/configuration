@@ -12,6 +12,6 @@
         "role[base]",
         "recipe[nodejs]",
         "recipe[npm]",
-        "recipe[firefox]"
+        "recipe[rabbitmq]"
     ]
 }

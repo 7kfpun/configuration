@@ -1,6 +1,6 @@
 APP_HOSTNAME = 'virtual1'
 APP_HOST = '33.33.33.10'
-APP_ROLES = ['pyhub']
+APP_ROLES = ['webapp']
 
 # Config
 NFS = true
@@ -26,8 +26,8 @@ Vagrant.configure("2") do |config|
     exit
   end
 
-  config.vm.box = "precise64"
-  config.vm.box_url = "http://files.vagrantup.com/precise64.box"
+  config.vm.box = "ubuntu/trusty64"
+  config.vm.box_url = "https://vagrantcloud.com/ubuntu/trusty64"
 
   # Set hostname
   config.vm.hostname = APP_HOSTNAME
