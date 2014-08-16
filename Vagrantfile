@@ -27,7 +27,7 @@ Vagrant.configure("2") do |config|
   end
 
   config.vm.box = "ubuntu/trusty64"
-  config.vm.box_url = "https://vagrantcloud.com/ubuntu/trusty64"
+  # config.vm.box_url = ""
 
   # Set hostname
   config.vm.hostname = APP_HOSTNAME
