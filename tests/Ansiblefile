@@ -3,8 +3,14 @@
 
 site "https://galaxy.ansible.com/api/v1"
 
-role "bennojoy.nginx"
-role "DavidWittman.ansible-redis", github: "DavidWittman/ansible-redis"
+# role "bennojoy.nginx"
+# role "DavidWittman.ansible-redis", github: "DavidWittman/ansible-redis"
 role "Ansibles.mysql"
 role "Stouts.supervisor"
 role "Stouts.users"
+role "Stouts.sudo"
+role "Stouts.sentry"
+role "Stouts.jenkins"
+role "Stouts.nginx"
+role "Stouts.python"
+role "Stouts.redis"
